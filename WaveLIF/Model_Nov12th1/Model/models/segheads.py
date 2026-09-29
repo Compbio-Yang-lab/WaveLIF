@@ -130,7 +130,7 @@ class UNetSegHead_WaveOT(nn.Module):
         self.ssi3 = SubbandInjector(skip_ch=base * 4, aux_ch=base * 2)  # a2_*：2B → 4B
         self.ssi4 = SubbandInjector(skip_ch=base * 8, aux_ch=base * 4)  # a3_*：4B → 8B
 
-        # Encoder pyramid (ConvNeXt)
+        # Encoder pyramid (Haar WaveDown + WaveletBlock)
         self.down1 = make_down("wave", base, base * 2, depth=d1)
         self.down2 = make_down("wave", base * 2, base * 4, depth=d2)
         self.down3 = make_down("wave", base * 4, base * 8, depth=d3)

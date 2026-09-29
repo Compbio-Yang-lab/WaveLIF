@@ -86,7 +86,7 @@ def handle_visualization_logging_checkpointing(
 @click.option('--modalities-no', default=4, type=int, help='number of targets')
 # model parameters
 @click.option('--model', default='ParsiLIF', help='name of model class')
-@click.option('--seghead', default=['unet_wave'], help='name of seghead')
+@click.option('--seghead', default='unet_wave', show_default=True, help='name of seghead')
 @click.option('--seg-weights', default='', type=str, help='weights used to aggregate modality images for the final segmentation image; numbers should add up to 1, and each number corresponds to the modality in order; example: 0.25,0.15,0.25,0.1,0.25')
 @click.option('--loss-weights-g', default='', type=str, help='weights used to aggregate modality-wise losses for the final loss; numbers should add up to 1, and each number corresponds to the modality in order; example: 0.2,0.2,0.2,0.2,0.2')
 @click.option('--loss-weights-d', default='', type=str, help='weights used to aggregate modality-wise losses for the final loss; numbers should add up to 1, and each number corresponds to the modality in order; example: 0.2,0.2,0.2,0.2,0.2')

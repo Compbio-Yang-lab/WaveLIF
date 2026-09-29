@@ -110,13 +110,13 @@ class WaveUp(nn.Module):
 
 # ----------------------------- factory -----------------------------
 DOWN_REGISTRY = {
-    "mde":WaveDown, # kwargs: depth
+    "wave": WaveDown, # kwargs: depth
 }
 UP_REGISTRY = {
-    "mde": WaveUp,
+    "wave": WaveUp,
 }
 BLOCK_REGISTRY = {
-    "mde": wave_stage,
+    "wave": wave_stage,
 }
 
 
